@@ -14,11 +14,13 @@ Data
 -----
 - `PLAY_ID`: A unique integer play ID
 - `GAME_ID`: A unique game ID of the format `YYYYMMDD_AWAYTEAM@HOMETEAM`
+- `REL_PLAY_ID`: A unique integer for each play of a given GAME_ID
 - `QTR`: What quarter of the game the play occurs in
 - `MIN`: How many minutes are left in the game (from 60)
 - `SEC`: How many seconds are left in the game in addition to `MIN`
 - `OFF`: Which team is on offense
 - `DEF`: Which team is on defense
+- `DRIVE_ID`: The drive number of the team currently on offense (-1 if DOWN == 0)
 - `DOWN`: What down it is
 - `YARDS_TO_FIRST`: Yards needed for offense to get a first down/touchdown
 - `YARDS_TO_GOAL`: Yards needed for the offense to get a touchdown
@@ -32,6 +34,11 @@ Data
 - `HOME_TEAM`: Which team was the home team
 - `AWAY_TEAM`: Which team was the away team
 - `PLAY_TYPE`: a series of identifiers separated by pipe symbols (|) explaining what kind of play it is.  A play can have any number of identifiers, or zero.
+
+Known errors
+-----
+There are 56 games missing a row for the opening kickoff.
+There are 402 plays with incorrect play timing in the DESCRIPTION, MIN, SEC fields.
 
 Description/Play Type
 -----
@@ -92,7 +99,6 @@ To Do
 
 - Add kneeldowns, spikes, and extra points to `PLAY_TYPE`
 - Figure out a good regular expression to recognize the generic run descriptions
-- Add a `DRIVE_ID` field to group plays easily by drive
 
 Conditions for PLAY_TYPE
 -----
