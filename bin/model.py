@@ -77,4 +77,4 @@ class Play:
         self.play_type = row['PLAY_TYPE']
 
         self.rel_play_id = row['REL_PLAY_ID']
-        self.drive_id = None # row['DRIVE_ID']
+        self.drive_id = row['DRIVE_ID']
