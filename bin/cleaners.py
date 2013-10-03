@@ -20,11 +20,11 @@ def output_filtered_team(infile, outfile, team):
     print 'FINISHED'
 
 def assert_invertible():
-    rows = load_as_rows('nflplays_small.csv')
+    rows = load_as_rows('nflplays_small_2.csv')
     print 'LOADED'
-    dump_as_rows('nflplays_small_2.csv', rows)
+    dump_as_rows('nflplays_small_3.csv', rows)
     print 'WRITTEN'
-    rows2 = load_as_rows('nflplays_small_2.csv')
+    rows2 = load_as_rows('nflplays_small_3.csv')
     print 'RELOADED'
     for row1, row2 in zip(rows, rows2):
         assert str(row1.dump()) == str(row2.dump())
