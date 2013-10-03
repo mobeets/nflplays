@@ -20,7 +20,7 @@ Data
 - `SEC`: How many seconds are left in the game in addition to `MIN`
 - `OFF`: Which team is on offense
 - `DEF`: Which team is on defense
-- `DRIVE_ID`: The drive number of the team currently on offense (-1 if DOWN == 0)
+- `DRIVE_ID`: The drive number of the team currently on offense (-1 when `DOWN` is 0)
 - `DOWN`: What down it is
 - `YARDS_TO_FIRST`: Yards needed for offense to get a first down/touchdown
 - `YARDS_TO_GOAL`: Yards needed for the offense to get a touchdown
@@ -38,6 +38,7 @@ Data
 Known errors
 -----
 There are 56 games missing a row for the opening kickoff.
+
 There are 402 plays with incorrect play timing in the `DESCRIPTION`, `MIN`, `SEC` fields.
 
 Description/Play Type
