@@ -14,7 +14,7 @@ Data
 -----
 - `PLAY_ID`: A unique integer play ID
 - `GAME_ID`: A unique game ID of the format `YYYYMMDD_AWAYTEAM@HOMETEAM`
-- `REL_PLAY_ID`: A unique integer for each play of a given GAME_ID
+- `REL_PLAY_ID`: A unique integer for each play of a given `GAME_ID`
 - `QTR`: What quarter of the game the play occurs in
 - `MIN`: How many minutes are left in the game (from 60)
 - `SEC`: How many seconds are left in the game in addition to `MIN`
@@ -38,7 +38,7 @@ Data
 Known errors
 -----
 There are 56 games missing a row for the opening kickoff.
-There are 402 plays with incorrect play timing in the DESCRIPTION, MIN, SEC fields.
+There are 402 plays with incorrect play timing in the `DESCRIPTION`, `MIN`, `SEC` fields.
 
 Description/Play Type
 -----
